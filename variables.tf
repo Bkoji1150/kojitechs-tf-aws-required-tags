@@ -12,11 +12,11 @@ variable "line_of_business" {
 variable "ado" {
   description = "HIDS ADO that owns the resource. The ServiceNow Contracts table is the system of record for the actual ADO names and LOB names."
   type        = string
-  default     = "Bellese"
+  default     = "Kojitechs"
 
   validation {
-    condition     = contains(["Arbor", "Aplus", "ATG", "Bellese", "CVP", "FEI", "Flexion", "GDIT", "Hendall", "Mantech", "Raven TEK", "SBD", "SemanticBits", "Tantus", "Telligen", "Tista", "Ventech", "Ventera"], var.ado)
-    error_message = "The ado value must be one of \"Arbor\", \"Aplus\", \"ATG\", \"Bellese\", \"CVP\", \"FEI\", \"Flexion\", \"GDIT\", \"Hendall\", \"Mantech\", \"Raven TEK\", \"SBD\", \"SemanticBits\", \"Tantus\", \"Telligen\", \"Tista\", \"Ventech\", \"Ventera\"."
+    condition     = contains(["Arbor", "Aplus", "ATG", "Kojitechs", "CVP", "FEI", "Flexion", "GDIT", "Hendall", "Mantech", "Raven TEK", "SBD", "SemanticBits", "Tantus", "Telligen", "Tista", "Ventech", "Ventera"], var.ado)
+    error_message = "The ado value must be one of \"Arbor\", \"Aplus\", \"ATG\", \"Kojitechs\", \"CVP\", \"FEI\", \"Flexion\", \"GDIT\", \"Hendall\", \"Mantech\", \"Raven TEK\", \"SBD\", \"SemanticBits\", \"Tantus\", \"Telligen\", \"Tista\", \"Ventech\", \"Ventera\"."
   }
 }
 
