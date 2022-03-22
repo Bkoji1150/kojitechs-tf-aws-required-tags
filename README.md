@@ -1,0 +1,1 @@
+# kojitechs-tf-aws-required-tags
