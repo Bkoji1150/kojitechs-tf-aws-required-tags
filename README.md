@@ -7,7 +7,7 @@ For more information see [Architecture and DevOps - Resource Tagging](https://co
 
 ```terraform
 module required_tags {
-  source = "git::ssh://git@qnetgit.cms.gov/Bellese/bellese-tf-aws-required-tags.git?ref=tags/v0.4.0"
+  source = "git::ssh://git@github.com:Bkoji1150/kojitechs-tf-aws-required-tags.git?ref=tags/v1.0.0"
 
   line_of_business        = "HQR"
   ado                     = "Bellese"
@@ -31,7 +31,7 @@ This automatically adds the tags to all resources. It's much easier than passing
 However, are a few limitations to keep in mind:
 
 - There can only be 10 tags on an S3 bucket object, so unfortunately we have to apply that limit to all resources since there is no easy way to cut the tags down just for S3 objects
-- This gets complicated when a different AWS provider is used inside modules. The tags would still have to be passed so the nested provider can use them (e.g. https://qnetgit.cms.gov/Bellese/hqr-tf-aws-iam-role/blob/v0.4.2/main.tf#L3)
+- This gets complicated when a different AWS provider is used inside modules. The tags would still have to be passed so the nested provider can use them (e.g. git@github.com:Bkoji1150/kojitechs-tf-aws-required-tags.git#L3)
 
 ```terraform
 provider "aws" {
