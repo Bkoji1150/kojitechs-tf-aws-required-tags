@@ -7,7 +7,7 @@ For more information see [Architecture and DevOps - Resource Tagging](https://co
 
 ```terraform
 module required_tags {
-  source = "git::ssh://git@github.com:Bkoji1150/kojitechs-tf-aws-required-tags.git?ref=tags/v1.0.0"
+  source = "git::ssh://git@github.com:Bkoji1150/kojitechs-tf-aws-required-tags.git"
 
   line_of_business        = "HQR"
   ado                     = "Bellese"
