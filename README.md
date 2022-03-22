@@ -1,4 +1,4 @@
-# bellese-tf-aws-required-tags
+# Kojitechs-tf-aws-required-tags
 
 This module takes in as variables the values to build the base set of required tags for AWS Resources.
 For more information see [Architecture and DevOps - Resource Tagging](#) along with [HCT AWS Tagging Standard](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html).
@@ -7,17 +7,17 @@ For more information see [Architecture and DevOps - Resource Tagging](#) along w
 
 ```terraform
 module required_tags {
-  source = "git::ssh://git@github.com:Bkoji1150/kojitechs-tf-aws-required-tags.git?ref=tags/v2.3.4"
+  source = "git::ssh://git@github.com:Bkoji1150/kojitechs-tf-aws-required-tags.git" 
 
   line_of_business        = "HQR"
-  ado                     = "Bellese"
+  ado                     = "Kojitechs"
   tier                    = "MGT"
   operational_environment = "SBX"
-  tech_poc_primary        = "example_primary@bellese.io"
-  tech_poc_secondary      = "example_secondary@bellese.io"
+  tech_poc_primary        = "example_primary@Kojitechs.io"
+  tech_poc_secondary      = "example_secondary@Kojitechs.io"
   application             = "HQR"
-  builder                 = "example_builder@bellese.io"
-  application_owner       = "example_group@bellese.io"
+  builder                 = "example_builder@Kojitechs.io"
+  application_owner       = "example_group@Kojitechs.io"
   vpc                     = "APP"
   cell_name               = "example"
   component_name          = "foo"
@@ -91,7 +91,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_ado"></a> [ado](#input\_ado) | HIDS ADO that owns the resource. The ServiceNow Contracts table is the system of record for the actual ADO names and LOB names. | `string` | `"Bellese"` | no |
+| <a name="input_ado"></a> [ado](#input\_ado) | HIDS ADO that owns the resource. The ServiceNow Contracts table is the system of record for the actual ADO names and LOB names. | `string` | `"Kojitechs"` | no |
 | <a name="input_application"></a> [application](#input\_application) | Logical name for the application. Mainly used for Ventech. For an ADO/LOB owned application default to the LOB name. | `string` | `null` | no |
 | <a name="input_application_owner"></a> [application\_owner](#input\_application\_owner) | Email Address of the group who owns the application. This should be a distribution list and no an individual email if at all possible. Primarily used for Ventech-owned applications to indicate what group/department is responsible for the application using this resource. For an ADO/LOB owned application default to the LOB name. | `any` | n/a | yes |
 | <a name="input_builder"></a> [builder](#input\_builder) | The name of the person who created the resource. | `string` | n/a | yes |
