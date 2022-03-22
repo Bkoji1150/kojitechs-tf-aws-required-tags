@@ -7,20 +7,20 @@ For more information see [Architecture and DevOps - Resource Tagging](#) along w
 
 ```terraform
 module required_tags {
-  source = "git::ssh://git@github.com:Bkoji1150/kojitechs-tf-aws-required-tags.git" 
+  source = "git::git@github.com:Bkoji1150/kojitechs-tf-aws-required-tags.git" 
 
-  line_of_business        = "HQR"
+  line_of_business        = var.line_of_business 
   ado                     = "Kojitechs"
-  tier                    = "MGT"
-  operational_environment = "SBX"
-  tech_poc_primary        = "example_primary@Kojitechs.io"
-  tech_poc_secondary      = "example_secondary@Kojitechs.io"
+  tier                    = var.tier 
+  operational_environment = terraform.workspace
+  tech_poc_primary        = "Analytics@Kojitechs.io"
+  tech_poc_secondary      = "Analytics@Kojitechs.io"
   application             = "HQR"
-  builder                 = "example_builder@Kojitechs.io"
-  application_owner       = "example_group@Kojitechs.io"
+  builder                 = "kojibello058@gmail.com"
+  application_owner       = "Analytics@Kojitechs.io"
   vpc                     = "APP"
-  cell_name               = "example"
-  component_name          = "foo"
+  cell_name               = var.cell_name 
+  component_name          = var.component_name 
 }
 ```
 
