@@ -1,13 +1,13 @@
 # bellese-tf-aws-required-tags
 
 This module takes in as variables the values to build the base set of required tags for AWS Resources.
-For more information see [Architecture and DevOps - Resource Tagging](https://confluence.hcqis.org/pages/viewpage.action?spaceKey=HQR&title=Architecture+and+DevOps#ArchitectureandDevOps-ResourceTagging) along with [HCT AWS Tagging Standard](https://confluence.hcqis.org/display/HIDS/HCT+AWS+Tagging+Standard).
+For more information see [Architecture and DevOps - Resource Tagging](#) along with [HCT AWS Tagging Standard](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html).
 
 ## Usage
 
 ```terraform
 module required_tags {
-  source = "git::ssh://git@github.com:Bkoji1150/kojitechs-tf-aws-required-tags.git"
+  source = "git::ssh://git@github.com:Bkoji1150/kojitechs-tf-aws-required-tags.git?ref=tags/v2.3.4"
 
   line_of_business        = "HQR"
   ado                     = "Bellese"
