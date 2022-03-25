@@ -4,7 +4,7 @@ variable "line_of_business" {
   default     = "HQR"
 
   validation {
-    condition     = contains(["ASPEN", "CAADS", "DDST", "DEL", "EQRS", "ESRD QIP", "ESS", "HIDS", "HIVVS", "HQR", "iQIES", "MAT", "PAC GVO", "PM3", "QCOR", "QIES", "QMARS", "QPPAR", "QSEP", "QTSO", "SAS Viya"], var.line_of_business)
+    condition     = contains(["Kojitechs","QMARS", "QPPAR", "QSEP", "QTSO", "SAS Viya"], var.line_of_business)
     error_message = "The line_of_business value must be one of \"ASPEN\", \"CAADS\", \"DDST\", \"DEL\", \"EQRS\", \"ESRD QIP\", \"ESS\", \"HIDS\", \"HIVVS\", \"HQR\", \"iQIES\", \"MAT\", \"PAC GVO\", \"PM3\", \"QCOR\", \"QIES\", \"QMARS\", \"QPPAR\", \"QSEP\", \"QTSO\", \"SAS Viya\"."
   }
 }
@@ -86,7 +86,7 @@ variable "vpc" {
 
   validation {
     condition     = contains(["APP", "INFRA", "SEC", "ROUTING"], var.vpc)
-    error_message = "The vpc value must be one of \"APP\", \"INFRA\", \"SEC\", \"ROUTING\"."
+    error_message = "The vpc value must be one of \"APP\", \"DATA\", \"INFRA\", \"SEC\", \"ROUTING\"."
   }
 }
 
