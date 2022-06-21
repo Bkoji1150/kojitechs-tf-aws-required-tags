@@ -35,8 +35,8 @@ variable "operational_environment" {
   type        = string
 
   validation {
-    condition     = contains(["SBX", "DEV", "SHARED"], var.operational_environment)
-    error_message = "The operational_environment value must be one of \"SBX\", \"DEV\", \"TEST\", \"IMPL\", \"TFI\", \"PROD\"."
+    condition     = contains(["SBX", "PROD", "SHARED"], var.operational_environment)
+    error_message = "The operational_environment value must be one of \"SBX\", \"PROD\", \"SHARED\"."
   }
 }
 
