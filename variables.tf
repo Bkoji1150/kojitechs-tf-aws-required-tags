@@ -1,10 +1,10 @@
 variable "line_of_business" {
   description = "HIDS LOB that owns the resource."
   type        = string
-  default     = "HQR"
+  default     = "TECH"
 
   validation {
-    condition     = contains(["Kojitechs","QMARS", "QPPAR", "QSEP", "QTSO", "SAS Viya"], var.line_of_business)
+    condition     = contains(["TECH","GLOBAL", "QPPAR", "QSEP", "QTSO", "SAS Viya"], var.line_of_business)
     error_message = "The line_of_business value must be one of \"ASPEN\", \"CAADS\", \"DDST\", \"DEL\", \"EQRS\", \"ESRD QIP\", \"ESS\", \"HIDS\", \"HIVVS\", \"HQR\", \"iQIES\", \"MAT\", \"PAC GVO\", \"PM3\", \"QCOR\", \"QIES\", \"QMARS\", \"QPPAR\", \"QSEP\", \"QTSO\", \"SAS Viya\"."
   }
 }
