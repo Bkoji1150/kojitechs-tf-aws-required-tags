@@ -73,7 +73,7 @@ resource "aws_glue_catalog_database" "my_other_database" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.1.4, <1.2 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.1.5 |
 
 ## Providers
 
@@ -97,7 +97,7 @@ No resources.
 | <a name="input_builder"></a> [builder](#input\_builder) | The name of the person who created the resource. | `string` | n/a | yes |
 | <a name="input_cell_name"></a> [cell\_name](#input\_cell\_name) | The name of the cell. | `string` | n/a | yes |
 | <a name="input_component_name"></a> [component\_name](#input\_component\_name) | The name of the component, if applicable. | `string` | `null` | no |
-| <a name="input_line_of_business"></a> [line\_of\_business](#input\_line\_of\_business) | HIDS LOB that owns the resource. | `string` | `"HQR"` | no |
+| <a name="input_line_of_business"></a> [line\_of\_business](#input\_line\_of\_business) | HIDS LOB that owns the resource. | `string` | `"TECH"` | no |
 | <a name="input_operational_environment"></a> [operational\_environment](#input\_operational\_environment) | Operational Environment the resource resides in. The operational environments are MANDATORY for an ADO and Ventech. We use the VPC tag to differentiate the overall type of VPC from the specific operational environment. | `string` | n/a | yes |
 | <a name="input_tech_poc_primary"></a> [tech\_poc\_primary](#input\_tech\_poc\_primary) | Email Address of the Primary Technical Contact for the AWS resource. | `string` | n/a | yes |
 | <a name="input_tech_poc_secondary"></a> [tech\_poc\_secondary](#input\_tech\_poc\_secondary) | Email Address of the Secondary Technical Contact for the AWS resource. | `string` | n/a | yes |
