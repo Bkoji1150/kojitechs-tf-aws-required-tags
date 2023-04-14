@@ -43,7 +43,7 @@ provider "aws" {
 }
 ```
 
-
+```
 # module "alb" {
 #   source  = "terraform-aws-modules/alb/aws"
 #   version = "~> 6.0.0" 
@@ -216,7 +216,7 @@ provider "aws" {
 #   ]
 # }
 
-
+```
 ### As tags on each resource
 
 ```terraform
